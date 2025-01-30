@@ -1,23 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Tassin Hugo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur mon portfolio</h1>
-        <p>Je suis un développeur et voici mes projets.</p>
-    </header>
-    <section>
-        <h2>Mes projets</h2>
-        <ul>
-            <li>Projet 1</li>
-            <li>Projet 2</li>
-            <li>Projet 3</li>
-        </ul>
-    </section>
+  <!-- En-tête -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section Accueil -->
+  <section id="accueil">
+    <h1>Bienvenue sur mon portfolio</h1>
+    <p>Je suis un étudiant passionné par les nouvelles technologies, l'informatique et l'impression 3D. Mon portfolio met en avant mes projets académiques et personnels.De plus  je descris mes compétences techniques acquises durant ma formation.</p>
+  </section>
+
+  <!-- Section À propos -->
+  <section id="apropos">
+    <h2>À propos de moi</h2>
+    <p>Je suis passionné par l'électronique, les systèmes embarqués et l'automatisation. Mon parcours en BUT GEII m'a permis d'acquérir des compétences pratiques que je souhaite partager ici.</p>
+  </section>
+
+  <!-- Section Compétences -->
+  <section id="competences">
+    <h2>Mes compétences</h2>
+    <ul>
+      <li>Programmation : C, Python, LabVIEW</li>
+      <li>Systèmes embarqués : Arduino, NRF24L01</li>
+      <li>Logiciels : WinDev, Matlab, Proteus</li>
+    </ul>
+  </section>
+
+  <!-- Section Projets -->
+  <section id="projets">
+    <h2>Mes projets</h2>
+    <article>
+      <h3>Projet 1 : Robot autonome</h3>
+      <p>Conception d'un robot autonome contrôlé via Arduino et communication NRF24L01.</p>
+    </article>
+    <article>
+      <h3>Projet 2 : Application de gestion</h3>
+      <p>Développement d'une application en WinDev pour la gestion d'inventaire.</p>
+    </article>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="mailto:tonemail@example.com" method="post" enctype="text/plain">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>© 2025 Ton Nom - Tous droits réservés</p>
+  </footer>
 </body>
 </html>
