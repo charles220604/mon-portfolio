@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: linear-gradient(135deg, #4A90E2, #8E44AD);
+  background: linear-gradient(135deg, #4A90E2, #8E44AD);
 }
 
 /* Animations */
