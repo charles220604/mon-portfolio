@@ -20,27 +20,11 @@
     </nav>
   </header>
 
-  <!-- Section Accueil -->
-  <section id="accueil">
-    <h1>Bienvenue sur mon portfolio</h1>
-    <p>Je suis un étudiant passionné par les nouvelles technologies, l'informatique et l'impression 3D. Mon portfolio met en avant mes projets académiques et personnels.De plus  je descris mes compétences techniques acquises durant ma formation.</p>
-  </section>
+  
 
-  <!-- Section À propos -->
-  <section id="apropos">
-    <h2>À propos de moi</h2>
-    <p>Je suis passionné par l'électronique, les systèmes embarqués et l'automatisation. Mon parcours en BUT GEII m'a permis d'acquérir des compétences pratiques que je souhaite partager ici.</p>
-  </section>
+  
 
-  <!-- Section Compétences -->
-  <section id="competences">
-    <h2>Mes compétences</h2>
-    <ul>
-      <li>Programmation : C, Python, LabVIEW</li>
-      <li>Systèmes embarqués : Arduino, NRF24L01</li>
-      <li>Logiciels : WinDev, Matlab, Proteus</li>
-    </ul>
-  </section>
+  
 
   <!-- Section Projets -->
   <section id="projets">
@@ -71,24 +55,6 @@
   <!-- Section Contact -->
   
   
-  
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="mailto:tonemail@example.com" method="post" enctype="text/plain">
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message :</label>
-      <textarea id="message" name="message"></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-
-
   <!-- Pied de page -->
   <footer>
     <p>© 2025 Tassin Hugo - Tous droits réservés</p>
