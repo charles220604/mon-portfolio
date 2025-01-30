@@ -9,7 +9,7 @@ body {
   position: relative;
 
 
-}
+/*}
 body::after {
     content: "";
     position: absolute;
@@ -20,6 +20,7 @@ body::after {
     background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
     pointer-events: none; /* Évite d'interférer avec les interactions */
 }
+*/
 /* Animations */
 @keyframes fadeIn {
   from {
