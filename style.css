@@ -52,7 +52,7 @@ body::after {
 /* En-tête */
 header {
   background: #333;
-  color: #fff;
+  color: #000;
   padding: 1rem 0;
   text-align: center;
   position: sticky;
