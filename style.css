@@ -31,7 +31,7 @@ body::after {
   }
 }
 
-@keyframes slideInFromLeft {
+@keyframes slideInFromRight {
   from {
     transform: translateX(-100%);
   }
