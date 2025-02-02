@@ -176,7 +176,7 @@ footer {
 /* Carrousel */
 .carousel-container {
     position: relative;
-    width: 80%;
+    width: 40%;
     max-width: 600px;
     margin: auto;
     overflow: hidden;
