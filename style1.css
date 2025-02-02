@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background: linear-gradient(215deg, #4A90E2 0%, #8E44AD 50%, #C0C0C0 100%);
+  background: linear-gradient(215deg, #C0C0C0 0%, #8E44AD 50%, #C0C0C0 100%);
   position: relative;
 
 /*#FF5733 75%, #4A90E2*/
