@@ -209,7 +209,7 @@ html {
 
 
 img {
-    width : 300px ; 
-    height : auto ; 
+  max-width: 100%;
+  height: auto;
 }
 
