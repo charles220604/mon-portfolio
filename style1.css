@@ -204,3 +204,12 @@ html {
     linear-gradient(90deg, var(--c0) 0 50%, var(--c2) 0 75%, var(--c0) 0 100%) var(--ts),
     repeating-linear-gradient(90deg, var(--c1) 0 24.33%, var(--c3) 0 25%) var(--ts);
 }
+
+
+
+
+img {
+    width : 300px ; 
+    height : auto ; 
+}
+
