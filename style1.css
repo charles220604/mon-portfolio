@@ -1,6 +1,6 @@
 /* Style global */
 body {
-  font-family: Arial, sans-serif;
+ /* font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -18,7 +18,8 @@ body::after {
   height: 100%;
   background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
   pointer-events: none;
-}
+*/
+  }
 
 /* Animations */
 @keyframes fadeIn {
