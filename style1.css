@@ -5,10 +5,23 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background: linear-gradient(215deg, #C0C0C0 0%, #4A90E2 50%, #C0C0C0 100%);
+  background: linear-gradient(215deg, #007BFF, #00B8D4, #6A11CB);
   position: relative;
 
-/*#FF5733 75%, bleu:#4A90E2, violet: #8E44AD*/
+/*#FF5733 75%, bleu:#4A90E2, violet: #8E44AD
+
+firs: background: linear-gradient(215deg, #C0C0C0 0%, #4A90E2 50%, #C0C0C0 100%);
+  
+Bleu électrique → Cyan → Violet high-tech
+background: linear-gradient(135deg, #007BFF, #00B8D4, #6A11CB);
+
+
+
+
+
+
+
+*/
 }
 body::after {
     content: "";
