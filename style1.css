@@ -1,14 +1,14 @@
 /* Style global */
 body {
-  font-family: Arial, sans-serif;
+ /* font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   color: #333;
- /* background: linear-gradient(215deg, #00C853, #0D47A1, #B0BEC5);*/
+  background: linear-gradient(215deg, #00C853, #0D47A1, #B0BEC5);
   position: relative;
- /* background: url('circuit-pattern.png'), #0D47A1;
-  background-size: cover;
+  background: url('circuit-pattern.png'), #0D47A1;
+  background-size: cover; */
 
 /*#FF5733 75%, bleu:#4A90E2, violet: #8E44AD
 
