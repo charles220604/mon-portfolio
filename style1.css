@@ -154,9 +154,12 @@ footer {
   animation: fadeIn 2s ease-in;
 }
 
-/* Effet de fond */
 html {
   scroll-behaviour: smooth;
+}
+
+/* Effet de fond */
+html {
   --sz: 20px;
   --c0: #ffffff00;
   --c1: #bdd0e1;
