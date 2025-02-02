@@ -223,11 +223,12 @@ footer {
 
 
 
-
+html {
+  scroll-behaviour: smooth;
+}
 
 
 html {
-  scroll-behaviour: smooth;
   --sz: 20px;
   --c0: #ffffff00;
   --c1: #bdd0e1;
