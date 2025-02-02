@@ -84,5 +84,28 @@
   <footer>
     <p>© 2025 Tassin Hugo - Tous droits réservés</p>
   </footer>
+
+<svg id="circuit" viewBox="0 0 800 600">
+  <path d="M10,10 L100,10 L100,100 ..." stroke="white" stroke-width="2" fill="none"/>
+</svg>
+
+<script>
+  let paths = document.querySelectorAll("path");
+  paths.forEach((path, index) => {
+    path.style.strokeDasharray = path.getTotalLength();
+    path.style.strokeDashoffset = path.getTotalLength();
+    path.style.animation = `draw 2s linear ${index * 0.2}s forwards`;
+  });
+
+  let style = document.createElement("style");
+  style.innerHTML = `
+    @keyframes draw {
+      to { stroke-dashoffset: 0; }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
+  
 </body>
 </html>
