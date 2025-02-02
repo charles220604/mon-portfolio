@@ -50,15 +50,7 @@
       <li>Logiciels réseau : Cisco Packet Tracer, Wireshark, Putty, Windev, VirtulBox...</li>
     </ul>
   </section>
-  <div class="carousel-container">
-    <div class="carousel">
-        <img src="Photo_portfolio/image1.jpg" alt="Projet 1">
-        <img src="Photo_portfolio/image2.jpg" alt="Projet 2">
-        <img src="Photo_portfolio/image3.jpg" alt="Projet 3">
-    </div>
-    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="next" onclick="moveSlide(1)">&#10095;</button>
-</div>
+  
   <!-- Section Projets -->
   <section id="projets">
     <h2>Mes projets</h2>
@@ -112,18 +104,6 @@
   <footer>
     <p>© 2025 Tassin Hugo - Tous droits réservés</p>
   </footer>
- <script>
-    let index = 0;
-    const slides = document.querySelectorAll(".carousel img");
-
-    function moveSlide(step) {
-        index += step;
-        if (index >= slides.length) index = 0;
-        if (index < 0) index = slides.length - 1;
-        document.querySelector(".carousel").style.transform = `translateX(${-index * 100}%)`;
-    }
-
-    setInterval(() => moveSlide(1), 6000); // Défilement automatique toutes les 3 secondes
-</script> 
+ 
 </body>
 </html>
