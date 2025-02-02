@@ -96,11 +96,32 @@
       <button type="submit">Envoyer</button>
     </form>
   </section>
-
+  <div class="carousel-container">
+    <div class="carousel">
+        <img src="images/projet1.jpg" alt="Projet 1">
+        <img src="images/projet2.jpg" alt="Projet 2">
+        <img src="images/projet3.jpg" alt="Projet 3">
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
 
   <!-- Pied de page -->
   <footer>
     <p>© 2025 Tassin Hugo - Tous droits réservés</p>
   </footer>
+ <script>
+    let index = 0;
+    const slides = document.querySelectorAll(".carousel img");
+
+    function moveSlide(step) {
+        index += step;
+        if (index >= slides.length) index = 0;
+        if (index < 0) index = slides.length - 1;
+        document.querySelector(".carousel").style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    setInterval(() => moveSlide(1), 3000); // Défilement automatique toutes les 3 secondes
+</script> 
 </body>
 </html>
