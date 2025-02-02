@@ -177,7 +177,7 @@ footer {
 .carousel-container {
     position: relative;
     width: 80%;
-    max-width: 300px;
+    max-width: 600px;
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -190,7 +190,7 @@ footer {
 }
 
 .carousel img {
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
 }
 
