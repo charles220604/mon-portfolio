@@ -164,8 +164,9 @@ html {
   --ts: 50%/ calc(var(--sz) * 13.25) calc(var(--sz) * 11.7);
   margin: 0;
   padding: 0;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y:auto;
   background:
     repeating-conic-gradient(#3b354730 0.000001%, var(--c0) 0.00005%, var(--c0) 0.00035%, var(--c0) 0.00005%) var(--ts),
     repeating-conic-gradient(#35638b59 0.00002%, var(--c0) 0.00008%, var(--c0) 0.0008%, var(--c0) 0.00008%) var(--ts),
