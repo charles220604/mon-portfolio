@@ -1,6 +1,5 @@
 /* Style global */
-body {
- }
+body {}
 
 /* Animations */
 @keyframes fadeIn {
@@ -43,7 +42,7 @@ header ul li {
 }
 
 header ul li a {
-  color: #fff;
+  color: #FFF;
   text-decoration: none;
   font-weight: bold;
 }
@@ -57,7 +56,7 @@ section {
   padding: 20px;
   margin: 20px auto;
   max-width: 1200px;
-  background: #fff;
+  background: #FFF;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: slideInFromLeft 1s ease-in-out;
@@ -77,7 +76,7 @@ section ul {
 }
 
 section ul li {
-  background: #f4f4f9;
+  background: #F4F4F9;
   margin: 10px 0;
   padding: 10px;
   border-left: 5px solid #333;
@@ -104,17 +103,19 @@ form label {
   margin: 10px 0 5px;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   border-radius: 5px;
   font-size: 1rem;
 }
 
 form button {
   background: #333;
-  color: #fff;
+  color: #FFF;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -129,7 +130,7 @@ form button:hover {
 footer {
   text-align: center;
   background: #333;
-  color: #fff;
+  color: #FFF;
   padding: 10px 0;
   margin-top: 20px;
   animation: fadeIn 2s ease-in;
@@ -157,7 +158,8 @@ footer {
 }
 
 /* Boutons de navigation */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -172,7 +174,8 @@ footer {
 .prev { left: 10px; }
 .next { right: 10px; }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -188,7 +191,7 @@ html {
   padding: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-y:auto;
+  overflow-y: auto;
   background:
     repeating-conic-gradient(#3b354730 0.000001%, var(--c0) 0.00005%, var(--c0) 0.00035%, var(--c0) 0.00005%) var(--ts),
     repeating-conic-gradient(#35638b59 0.00002%, var(--c0) 0.00008%, var(--c0) 0.0008%, var(--c0) 0.00008%) var(--ts),
@@ -203,15 +206,4 @@ html {
     linear-gradient(150deg, var(--c0) 0 40%, var(--c3) calc(40% + 1px) 40.5%, var(--c0) calc(40.5% + 1px) 100%) var(--ts),
     linear-gradient(90deg, var(--c0) 0 50%, var(--c2) 0 75%, var(--c0) 0 100%) var(--ts),
     repeating-linear-gradient(90deg, var(--c1) 0 24.33%, var(--c3) 0 25%) var(--ts);
-
-
-
-
-
-
-<style>
-
-
-</style>
-
-
+}
