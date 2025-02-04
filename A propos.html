@@ -70,7 +70,7 @@
       background: white;
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease; /* Réduction du délai des transitions */
     }
     .event:hover {
       transform: scale(1.05);
@@ -115,7 +115,7 @@
       opacity: 0;
       max-height: 0;
       overflow: hidden;
-      transition: all 0.5s ease;
+      transition: all 0.3s ease; /* Réduction de la durée de l'animation */
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
     .details.active {
@@ -125,7 +125,7 @@
 
     /* Animation de la timeline */
     .timeline {
-      animation: slideIn 1.5s ease-out;
+      animation: slideIn 1s ease-out; /* Réduction de la durée à 1s */
     }
     @keyframes slideIn {
       from {
