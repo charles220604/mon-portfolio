@@ -209,12 +209,32 @@ html {
 }
 
 
-#a-propos img {
-    width: 200px;  /* Ajuste la largeur de l'image */
-    height: auto;  /* Garde les proportions */
-    display: block; /* Permet de centrer avec margin auto */
-    margin: 20px auto; /* Centre l'image */
-    border-radius: 50%; /* Rend l'image ronde (optionnel) */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Ajoute une légère ombre */
+.profil-container {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 20px; /* Espacement entre l'image et le texte */
+    max-width: 800px; /* Largeur maximale du bloc */
+    margin: 0 auto; /* Centre la section */
 }
+
+.profil-container img {
+    width: 180px; /* Taille de l'image */
+    height: auto;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+}
+
+.presentation {
+    flex: 1; /* Prend toute la place disponible à droite */
+    text-align: left;
+}
+
+.presentation h2 {
+    margin-bottom: 10px;
+}
+
+.presentation p {
+    margin: 5px 0;
+}
+
 
