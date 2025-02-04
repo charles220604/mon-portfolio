@@ -215,7 +215,7 @@ html {
     display: flex;
     align-items: center; /* Aligne verticalement */
     gap: 30px; /* Espacement entre l'image et le texte */
-    max-width: 800px; /* Largeur max du bloc */
+    max-width: 1100px; /* Largeur max du bloc */
     margin: 20px auto; /* Centre le tout */
     background: #f9A9f9; /* Fond légèrement gris */
     padding: 20px;
