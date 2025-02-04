@@ -208,3 +208,13 @@ html {
     repeating-linear-gradient(90deg, var(--c1) 0 24.33%, var(--c3) 0 25%) var(--ts);
 }
 
+
+#a-propos img {
+    width: 200px;  /* Ajuste la largeur de l'image */
+    height: auto;  /* Garde les proportions */
+    display: block; /* Permet de centrer avec margin auto */
+    margin: 20px auto; /* Centre l'image */
+    border-radius: 50%; /* Rend l'image ronde (optionnel) */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Ajoute une légère ombre */
+}
+
