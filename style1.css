@@ -217,7 +217,7 @@ html {
     gap: 30px; /* Espacement entre l'image et le texte */
     max-width: 1100px; /* Largeur max du bloc */
     margin: 20px auto; /* Centre le tout */
-    background: #f9A9f9; /* Fond légèrement gris */
+    background: #f9f9f9; /* Fond légèrement gris */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
