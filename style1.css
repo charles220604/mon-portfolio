@@ -210,7 +210,7 @@ html {
 
 
 .profil-container {
-    display: flex;
+    display: flex-wrap;
     align-items: center; /* Centre les éléments verticalement */
     gap: 20px; /* Espacement entre l'image et le texte */
     max-width: 800px; /* Largeur maximale du bloc */
