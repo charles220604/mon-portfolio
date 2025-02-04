@@ -1,10 +1,107 @@
-              <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Tassin Hugo</title>
   <link rel="stylesheet" href="style1.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 50px 0;
+    }
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 6px;
+      height: 100%;
+      background-color: #007bff;
+      transform: translateX(-50%);
+    }
+    .event {
+      position: relative;
+      width: 50%;
+      margin-bottom: 50px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .event:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .left {
+      left: 0;
+      text-align: right;
+    }
+    .right {
+      left: 50%;
+      text-align: left;
+    }
+    .event h2 {
+      margin: 0;
+      color: #007bff;
+    }
+    .event p {
+      font-size: 16px;
+      color: #333;
+    }
+    .date {
+      position: absolute;
+      top: 20px;
+      width: 100px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    .left .date {
+      right: -120px;
+    }
+    .right .date {
+      left: -120px;
+    }
+    /* Styles pour les détails supplémentaires */
+    .details {
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    .details.active {
+      opacity: 1;
+      max-height: 200px;
+    }
+    /* Animation de la frise */
+    .timeline {
+      animation: slideIn 1.5s ease-out;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- En-tête -->
@@ -20,115 +117,96 @@
     </nav>
   </header>
 
- 
-  <!-- Section qui suis-je -->
+  <!-- Section Qui suis-je ? -->
   <section id="Qui-suis-je ?">
     <h2>Qui suis-je ?</h2>
+    <div class="profil-container">
+      <div class="photo">
+        <img src="Photo_portfolio/Photo_profil_portfolio.png" alt="Photo de profil">
+      </div>
+      <div class="presentation">
+        <h2>À propos de moi</h2>
+        <p><strong>Nom :</strong> Tassin</p>
+        <p><strong>Prénom :</strong> Hugo</p>
+        <p><strong>Âge :</strong> 20 ans</p>
+        <p><strong>Formation :</strong> BUT GEII</p>
+        <p>Étudiant passionné par l'automatisme, l'informatique et l'électronique, je développe mes compétences à travers divers projets académiques et personnels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Mon Parcours avec la Timeline -->
+  <section id="Mon parcours">
+    <h1>Mon Parcours</h1>
+    <p>Je suis un étudiant passionné par les nouvelles technologies, l'informatique et l'électronique. Mon portfolio met en avant mes projets académiques et personnels. De plus, je décris mes compétences techniques acquises durant ma formation.</p>
     
-  
-  <!--<section id="a-propos">-->
-  <div class="profil-container">
-    <!-- Image à gauche -->
-    <div class="photo">
-      <img src="Photo_portfolio/Photo_profil_portfolio.png" alt="Photo de profil">
+    <div class="timeline">
+      <div class="event left" onclick="toggleDetails('details-2019')">
+        <span class="date">2019-2020</span>
+        <h2>Seconde Générale</h2>
+        <p>Découverte des bases scientifiques et techniques.</p>
+        <div id="details-2019" class="details">
+          <p>Année d'introduction aux matières scientifiques de base avec un fort accent sur les mathématiques et la physique.</p>
+        </div>
+      </div>
+      <div class="event right" onclick="toggleDetails('details-2020')">
+        <span class="date">2020-2021</span>
+        <h2>Première STI2D</h2>
+        <p>Introduction à l’électronique et programmation.</p>
+        <div id="details-2020" class="details">
+          <p>Approfondissement de l’électronique et des systèmes informatiques avec des projets pratiques en programmation.</p>
+        </div>
+      </div>
+      <div class="event left" onclick="toggleDetails('details-2021')">
+        <span class="date">2021-2022</span>
+        <h2>Terminale STI2D</h2>
+        <p>Projet BAC et approfondissement des concepts.</p>
+        <div id="details-2021" class="details">
+          <p>Année de préparation au bac avec un projet scientifique et technique, ainsi que des révisions intensives des matières techniques.</p>
+        </div>
+      </div>
+      <div class="event right" onclick="toggleDetails('details-2022')">
+        <span class="date">2022-2023</span>
+        <h2>BUT GEII 1A</h2>
+        <p>Apprentissage du C, Arduino, et circuits électriques.</p>
+        <div id="details-2022" class="details">
+          <p>Première année du BUT GEII, avec un focus sur les bases de l’électronique, la programmation C et l’utilisation d’Arduino.</p>
+        </div>
+      </div>
+      <div class="event left" onclick="toggleDetails('details-2023')">
+        <span class="date">2023-2024</span>
+        <h2>BUT GEII 2A</h2>
+        <p>Automatisme, réseaux et maintenance.</p>
+        <div id="details-2023" class="details">
+          <p>Deuxième année du BUT GEII avec des cours sur l’automatisme, les réseaux industriels et la maintenance des systèmes électroniques.</p>
+        </div>
+      </div>
+      <div class="event right" onclick="toggleDetails('details-2024')">
+        <span class="date">2024-2025</span>
+        <h2>BUT GEII 3A</h2>
+        <p>Stage Toyota et spécialisation en systèmes industriels.</p>
+        <div id="details-2024" class="details">
+          <p>Troisième année avec un stage chez Toyota, visant à approfondir mes connaissances en systèmes industriels et en automatisation.</p>
+        </div>
+      </div>
     </div>
-
-    <!-- Présentation à droite -->
-    <div class="presentation">
-      <h2>À propos de moi</h2>
-      <p><strong>Nom :</strong> Tassin</p>
-      <p><strong>Prénom :</strong> Hugo</p>
-      <p><strong>Âge :</strong> 20 ans</p>
-      <p><strong>Formation :</strong> BUT GEII</p>
-      <p>Étudiant passionné par l'automatisme, l'informatique et l'électronique, je développe mes compétences à travers divers projets académiques et personnels.</p>
-    </div>
-  </div>
-</section>
-
-
-
-       
-</section>
-
-
-
-
-
-   <!-- Section Projet 1: suiveur de ligne -->
-  <section id="Projet 1 : Robot suiveur de ligne">
-    <h1> Robot suiveur de ligne</h1>
-    <p>Je suis un étudiant passionné par les nouvelles technologies, l'informatique et l'impression 3D. Mon portfolio met en avant mes projets académiques et personnels.De plus  je descris mes compétences techniques acquises durant ma formation.</p>
   </section>
 
-
-  
-  <!-- Section Projet 2: Application de gestiondes contrats de location de véhicules d'une agence  -->
-  <section id="Projet 2: Application de gestiondes contrats de location de véhicules d'une agence">
-    <h1> Application de gestiondes contrats de location de véhicules d'une agence</h1>
-    <p>Je suis un étudiant passionné par les nouvelles technologies, l'informatique et l'impression 3D. Mon portfolio met en avant mes projets académiques et personnels.De plus  je descris mes compétences techniques acquises durant ma formation.</p>
-  </section>
-
-  
-
-  <!-- Section Projet 3 : conception D'un bloc d'alimentation -->
-  <section id="Projet 3 : conception D'un bloc d'alimentation">
-    <h1> conception D'un bloc d'alimentation</h1>
-    <p>Je suis un étudiant passionné par les nouvelles technologies, l'informatique et l'impression 3D. Mon portfolio met en avant mes projets académiques et personnels.De plus  je descris mes compétences techniques acquises durant ma formation.</p>
- 
-  <div class="carousel-container">
-    <div class="carousel">
-        <img src="Photo_portfolio/image1.jpg" alt="Projet 1">
-        <img src="Photo_portfolio/image2.jpg" alt="Projet 2">
-        <img src="Photo_portfolio/image3.jpg" alt="Projet 3">
-    </div>
-    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="next" onclick="moveSlide(1)">&#10095;</button>
-</div>
-  
-  </section>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   <!-- Pied de page -->
   <footer>
     <p>© 2025 Tassin Hugo - Tous droits réservés</p>
   </footer>
-<script>
-    let index = 0;
-    const slides = document.querySelectorAll(".carousel img");
 
-    function moveSlide(step) {
-        index += step;
-        if (index >= slides.length) index = 0;
-        if (index < 0) index = slides.length - 1;
-        document.querySelector(".carousel").style.transform = `translateX(${-index * 100}%)`;
+  <script>
+    function toggleDetails(id) {
+        var details = document.getElementById(id);
+        if (details.classList.contains("active")) {
+            details.classList.remove("active");
+        } else {
+            document.querySelectorAll(".details").forEach(d => d.classList.remove("active"));
+            details.classList.add("active");
+        }
     }
-
-    setInterval(() => moveSlide(1), 6000); // Défilement automatique toutes les 3 secondes
-</script> 
-
+  </script>
 </body>
 </html>
