@@ -1,48 +1,25 @@
-/* =========================
-    Animations
-=========================== */
+
+
+/* Style global */
+body {}
+
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 @keyframes slideInFromLeft {
-  from { transform: translateX(-100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 
-/* =========================
-    Style global
-=========================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@keyframes buttonHover {
+  from { background-color: #333; }
+  to { background-color: #555; }
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background:
-    repeating-conic-gradient(#3b354730 0.000001%, transparent 0.00005%, transparent 0.00035%, transparent 0.00005%) var(--ts),
-    repeating-conic-gradient(#35638b59 0.00002%, transparent 0.00008%, transparent 0.0008%, transparent 0.00008%) var(--ts),
-    repeating-linear-gradient(90deg, transparent 0 24.33%, #3e394a 0 25%) var(--ts),
-    linear-gradient(210deg, transparent 0 80%, #3e394a calc(80% + 1px) 80.5%, transparent calc(80.5% + 1px) 100%) var(--ts),
-    conic-gradient(from -90deg at 49.75% 100%, #bdd0e1 0 30deg, transparent 0 150deg, #809bb9 0 60deg) var(--ts),
-    conic-gradient(from -180deg at 24.5% 50.5%, #bdd0e1 0 119deg, transparent 0 100%) var(--ts),
-    conic-gradient(from 120deg at 74.5% 50%, #3e394a 0 120deg, transparent 0 100%) var(--ts),
-    conic-gradient(from 180deg at 49.5% 34%, #809bb9 0 60deg, transparent 0 100%) var(--ts),
-    conic-gradient(from -120deg at 50% 34%, #3e394a 0 60deg, transparent 0 100%) var(--ts),
-    conic-gradient(from 0deg at 74.5% 17.5%, #809bb9 0 60deg, #3e394a 0 121deg, transparent 0 100%) var(--ts),
-    linear-gradient(150deg, transparent 0 40%, #3e394a calc(40% + 1px) 40.5%, transparent calc(40.5% + 1px) 100%) var(--ts),
-    linear-gradient(90deg, transparent 0 50%, #809bb9 0 75%, transparent 0 100%) var(--ts),
-    repeating-linear-gradient(90deg, #bdd0e1 0 24.33%, #3e394a 0 25%) var(--ts);
-}
-
-/* =========================
-    En-tête
-=========================== */
+/* En-tête */
 header {
   background: #333;
   color: #FFF;
@@ -56,26 +33,27 @@ header {
 
 header ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+}
+
+header ul li {
+  margin: 0 15px;
 }
 
 header ul li a {
   color: #FFF;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px;
-  transition: color 0.3s;
 }
 
 header ul li a:hover {
-  color: #ffd700;
+  text-decoration: underline;
 }
 
-/* =========================
-    Sections générales
-=========================== */
+/* Sections */
 section {
   padding: 20px;
   margin: 20px auto;
@@ -83,7 +61,7 @@ section {
   background: #FFF;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: slideInFromLeft 0.8s ease-in-out;
+  animation: slideInFromLeft 1s ease-in-out;
 }
 
 section h2 {
@@ -93,65 +71,45 @@ section h2 {
   color: #444;
 }
 
-/* =========================
-    Profil (Photo + Présentation)
-=========================== */
-.profil-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  max-width: 800px;
-  margin: 20px auto;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+/* Liste des compétences */
+section ul {
+  list-style: none;
+  padding: 0;
 }
 
-.photo img {
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+section ul li {
+  background: #F4F4F9;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 5px solid #333;
+  border-radius: 4px;
 }
 
-.presentation {
-  flex: 1;
+/* Projets */
+section article {
+  margin-bottom: 20px;
 }
 
-.presentation h2 {
-  margin-bottom: 10px;
+section article h3 {
+  margin-top: 0;
+  color: #555;
 }
 
-.presentation p {
-  margin: 5px 0;
-}
-
-/* Adaptation mobile */
-@media (max-width: 768px) {
-  .profil-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .photo img {
-    width: 120px;
-  }
-}
-
-/* =========================
-    Formulaire de contact
-=========================== */
+/* Formulaire de contact */
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+}
+
+form label {
+  margin: 10px 0 5px;
 }
 
 form input,
 form textarea,
 form button {
-  padding: 12px;
+  padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #CCC;
   border-radius: 5px;
   font-size: 1rem;
@@ -167,24 +125,20 @@ form button {
 
 form button:hover {
   background: #555;
+  animation: buttonHover 0.3s ease;
 }
 
-/* =========================
-    Pied de page
-=========================== */
+/* Pied de page */
 footer {
   text-align: center;
   background: #333;
   color: #FFF;
-  padding: 15px 0;
+  padding: 10px 0;
   margin-top: 20px;
-  font-size: 0.9rem;
   animation: fadeIn 2s ease-in;
 }
 
-/* =========================
-    Carrousel d'images
-=========================== */
+/* Carrousel */
 .carousel-container {
   position: relative;
   width: 80%;
@@ -205,10 +159,9 @@ footer {
   border-radius: 10px;
 }
 
-/* =========================
-    Boutons de navigation
-=========================== */
-.prev, .next {
+/* Boutons de navigation */
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -218,20 +171,74 @@ footer {
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-html, body {
-    min-height: 100vh;
-    width: 100%;
-    background-attachment: fixed; /* Fixe le fond */
-    background-size: cover; /* Évite les coupures */
+/* Effet de fond */
+html {
+  --sz: 20px;
+  --c0: #ffffff00;
+  --c1: #bdd0e1;
+  --c2: #809bb9;
+  --c3: #3e394a;
+  --ts: 50%/ calc(var(--sz) * 13.25) calc(var(--sz) * 11.7);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background:
+    repeating-conic-gradient(#3b354730 0.000001%, var(--c0) 0.00005%, var(--c0) 0.00035%, var(--c0) 0.00005%) var(--ts),
+    repeating-conic-gradient(#35638b59 0.00002%, var(--c0) 0.00008%, var(--c0) 0.0008%, var(--c0) 0.00008%) var(--ts),
+    repeating-linear-gradient(90deg, var(--c0) 0 24.33%, var(--c3) 0 25%) var(--ts),
+    linear-gradient(210deg, var(--c0) 0 80%, var(--c3) calc(80% + 1px) 80.5%, var(--c0) calc(80.5% + 1px) 100%) var(--ts),
+    conic-gradient(from -90deg at 49.75% 100%, var(--c1) 0 30deg, var(--c0) 0 150deg, var(--c2) 0 60deg) var(--ts),
+    conic-gradient(from -180deg at 24.5% 50.5%, var(--c1) 0 119deg, var(--c0) 0 100%) var(--ts),
+    conic-gradient(from 120deg at 74.5% 50%, var(--c3) 0 120deg, var(--c0) 0 100%) var(--ts),
+    conic-gradient(from 180deg at 49.5% 34%, var(--c2) 0 60deg, var(--c0) 0 100%) var(--ts),
+    conic-gradient(from -120deg at 50% 34%, var(--c3) 0 60deg, var(--c0) 0 100%) var(--ts),
+    conic-gradient(from 0deg at 74.5% 17.5%, var(--c2) 0 60deg, var(--c3) 0 121deg, var(--c0) 0 100%) var(--ts),
+    linear-gradient(150deg, var(--c0) 0 40%, var(--c3) calc(40% + 1px) 40.5%, var(--c0) calc(40.5% + 1px) 100%) var(--ts),
+    linear-gradient(90deg, var(--c0) 0 50%, var(--c2) 0 75%, var(--c0) 0 100%) var(--ts),
+    repeating-linear-gradient(90deg, var(--c1) 0 24.33%, var(--c3) 0 25%) var(--ts);
+}
+
+
+.profil-container {
+    display: flex;
+    align-items: center; /* Aligne verticalement */
+    gap: 30px; /* Espacement entre l'image et le texte */
+    max-width: 800px; /* Largeur max du bloc */
+    margin: 20px auto; /* Centre le tout */
+    background: #f9f9f9; /* Fond légèrement gris */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+}
+
+.photo img {
+    width: 150px; /* Taille de l'image */
+    height: auto;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.presentation {
+    flex: 1; /* Prend l'espace restant */
+    text-align: left;
+}
+
+.presentation h2 {
+    margin-bottom: 10px;
+}
+
+.presentation p {
+    margin: 5px 0;
 }
