@@ -220,7 +220,7 @@ html {
 .profil-container img {
     width: 180px; /* Taille de l'image */
     height: auto;
-    border-radius: 10px; /* Coins arrondis */
+    border-radius: 10px;  Coins arrondis */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
 }
 
