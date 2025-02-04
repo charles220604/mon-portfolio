@@ -215,3 +215,39 @@ html {
     linear-gradient(90deg, var(--c0) 0 50%, var(--c2) 0 75%, var(--c0) 0 100%) var(--ts),
     repeating-linear-gradient(90deg, var(--c1) 0 24.33%, var(--c3) 0 25%) var(--ts);
 }
+
+
+
+
+
+
+.photo img {
+    width: 250px; /* Taille de l'image */
+    height: auto;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.presentation {
+    flex: 1; /* Prend l'espace restant */
+    text-align: left;
+}
+
+.presentation h2 {
+    margin-bottom: 10px;
+}
+
+.presentation p {
+    margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
