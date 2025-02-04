@@ -250,7 +250,7 @@ html {
 /* Appliquer le fond à la page */
 body {
   font-family: Arial, sans-serif;
-  background: url('ton-image-de-fond.jpg') no-repeat center center fixed;
+  background: F9F9F9;
   background-size: cover;
   color: #333;
   margin: 0;
