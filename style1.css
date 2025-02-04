@@ -210,22 +210,26 @@ html {
 
 
 .profil-container {
-    display: flex-wrap;
-    align-items: center; /* Centre les éléments verticalement */
-    gap: 20px; /* Espacement entre l'image et le texte */
-    max-width: 800px; /* Largeur maximale du bloc */
-    margin: 0 auto; /* Centre la section */
+    display: flex;
+    align-items: center; /* Aligne verticalement */
+    gap: 30px; /* Espacement entre l'image et le texte */
+    max-width: 800px; /* Largeur max du bloc */
+    margin: 20px auto; /* Centre le tout */
+    background: #f9f9f9; /* Fond légèrement gris */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
 }
 
-.profil-container img {
-    width: 180px; /* Taille de l'image */
+.photo img {
+    width: 150px; /* Taille de l'image */
     height: auto;
-    border-radius: 10px;  Coins arrondis */
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .presentation {
-    flex: 1; /* Prend toute la place disponible à droite */
+    flex: 1; /* Prend l'espace restant */
     text-align: left;
 }
 
