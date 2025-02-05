@@ -1,7 +1,11 @@
 r
 
 /* Style global */
-body {}
+body {
+  text-align: left;
+
+  
+}
 
 /* Animations */
 @keyframes fadeIn {
