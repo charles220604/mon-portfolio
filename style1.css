@@ -265,7 +265,7 @@ body {
 
 /* Section header */
 header {
-  background-color: rgba(0, 0, 0, 0.5); /* Fond transparent pour plus de lisibilité */
+  background-color: rgba(33, 33, 33, 0.8); /* Fond transparent pour plus de lisibilité */
   padding: 10px;
 }
 header nav ul {
