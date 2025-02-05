@@ -373,7 +373,7 @@ h2 {
 .timeline {
   animation: slideIn 1s ease-out; /* Réduction de la durée à 1s */
 }
-/*@keyframes slideIn {
+@keyframes slideIn {
   from {
     opacity: 0;
     transform: translateY(50px);
@@ -383,4 +383,4 @@ h2 {
     transform: translateY(0);
   }
 }
-*/
+
