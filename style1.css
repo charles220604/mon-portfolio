@@ -319,7 +319,7 @@ h2 {
 }
 .left {
   left: 0;
-  text-align: right;
+  text-align: left;
 }
 .right {
   left: 50%;
