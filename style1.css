@@ -22,6 +22,11 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--color);
   background: var(--bgColor);
+
+    background-color: transparent;
+
+ 
+
 }
 
 h1 {
