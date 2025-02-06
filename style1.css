@@ -415,7 +415,7 @@ h2 {
 
 
 
-
+/*
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
@@ -447,7 +447,7 @@ ul {
   margin-inline: auto;
 }
 
-/* line */
+/* line 
 ul::before {
   content: "";
   grid-column: 1;
@@ -458,12 +458,12 @@ ul::before {
 
 /* columns*/
 
-/* row gaps */
+/* row gaps 
 ul li:not(:last-child) {
   margin-bottom: var(--row-gap);
 }
 
-/* card */
+/* card 
 ul li {
   grid-column: 2;
   --inlineP: 1.5rem;
@@ -473,7 +473,7 @@ ul li {
   grid-template-rows: min-content min-content min-content;
 }
 
-/* date */
+/* date 
 ul li .date {
   --dateH: 3rem;
   height: var(--dateH);
@@ -493,7 +493,7 @@ ul li .date {
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
 }
 
-/* date flap */
+/* date flap 
 ul li .date::before {
   content: "";
   width: var(--inlineP);
@@ -507,7 +507,7 @@ ul li .date::before {
   right: 0;
 }
 
-/* circle */
+/* circle 
 ul li .date::after {
   content: "";
   position: absolute;
@@ -522,7 +522,7 @@ ul li .date::after {
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-/* title descr */
+/* title descr 
 ul li .title,
 ul li .descr {
   background: var(--bgColor);
@@ -540,7 +540,7 @@ ul li .descr {
   font-weight: 300;
 }
 
-/* shadows */
+/* shadows 
 ul li .title::before,
 ul li .descr::before {
   content: "";
@@ -576,7 +576,7 @@ ul li .descr::before {
     grid-column: 3;
   }
 
-  /* start second card */
+  /* start second card 
   ul li:nth-child(2) {
     grid-row: 2/4;
   }
@@ -602,3 +602,7 @@ ul li .descr::before {
 .credits a {
   color: var(--color);
 }
+
+
+
+*/
