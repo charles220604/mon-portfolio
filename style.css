@@ -1,52 +1,24 @@
 /* Style global */
 body {
-  /*font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background: linear-gradient(135deg, #4A90E2 0%, #8E44AD 50%, #4A90E2 100%);
-  position: relative;*/
+  text-align: left;
 
-/*#FF5733 75%*/
-/*}
-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-    pointer-events: none; /* Évite d'interférer avec les interactions */
+
 }
-*/
+
 /* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 
 @keyframes buttonHover {
-  from {
-    background-color: #333;
-  }
-  to {
-    background-color: #555;
-  }
+  from { background-color: #333; }
+  to { background-color: #555; }
 }
 
 /* En-tête */
@@ -74,7 +46,7 @@ header ul li {
 }
 
 header ul li a {
-  color: #fff;
+  color: #FFF;
   text-decoration: none;
   font-weight: bold;
 }
@@ -88,7 +60,7 @@ section {
   padding: 20px;
   margin: 20px auto;
   max-width: 1200px;
-  background: #fff;
+  background: #FFF;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: slideInFromLeft 1s ease-in-out;
@@ -105,10 +77,11 @@ section h2 {
 section ul {
   list-style: none;
   padding: 0;
+  text-align: left
 }
 
 section ul li {
-  background: #f4f4f9;
+  background: #F4F4F9;
   margin: 10px 0;
   padding: 10px;
   border-left: 5px solid #333;
@@ -135,17 +108,19 @@ form label {
   margin: 10px 0 5px;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   border-radius: 5px;
   font-size: 1rem;
 }
 
 form button {
   background: #333;
-  color: #fff;
+  color: #FFF;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -160,34 +135,56 @@ form button:hover {
 footer {
   text-align: center;
   background: #333;
-  color: #fff;
+  color: #FFF;
   padding: 10px 0;
   margin-top: 20px;
   animation: fadeIn 2s ease-in;
 }
- 
+
+/* Carrousel */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
-
-
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
 
+/* Boutons de navigation */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
 
+.prev { left: 10px; }
+.next { right: 10px; }
 
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-
-
-
-
-
-
-
-
+/* Effet de fond */
 html {
   --sz: 20px;
   --c0: #ffffff00;
@@ -199,7 +196,7 @@ html {
   padding: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-y:auto;
+  overflow-y: auto;
   background:
     repeating-conic-gradient(#3b354730 0.000001%, var(--c0) 0.00005%, var(--c0) 0.00035%, var(--c0) 0.00005%) var(--ts),
     repeating-conic-gradient(#35638b59 0.00002%, var(--c0) 0.00008%, var(--c0) 0.0008%, var(--c0) 0.00008%) var(--ts),
@@ -217,17 +214,9 @@ html {
 }
 
 
-
-
-
-
-
-
-
-
 .profil-container {
     display: flex;
-    align-items: center; /* Aligne verticalement */
+    align-items: left; /* Aligne verticalement */
     gap: 30px; /* Espacement entre l'image et le texte */
     max-width: 1100px; /* Largeur max du bloc */
     margin: 20px auto; /* Centre le tout */
@@ -257,3 +246,139 @@ html {
     margin: 5px 0;
 }
 
+
+
+
+
+/* Appliquer le fond à la page */
+body {
+  font-family: Arial, sans-serif;
+  background: 010;
+  background-size: cover;
+  color: #333;
+  margin: 50;
+  padding: 50;
+
+}
+
+/* Section header */
+header {
+  background-color: rgba(33, 33, 33, 0.8); /* Fond transparent pour plus de lisibilité */
+  padding: 10px;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Section principale */
+section {
+  padding: 50px 10px;
+}
+
+h2 {
+  color: #007bff;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 100%;
+  background-color: #007bff;
+  transform: translateX(-50%);
+}
+.event {
+  position: relative;
+  width: 50%;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: F9F9F9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Réduction du délai des transitions */
+}
+.event:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.left {
+  right: 0;
+  right: -50;
+  text-align: left;
+}
+.right {
+  left: 50%;
+  text-align: left;
+}
+.event h2 {
+  margin: 0;
+  color: #007bff;
+}
+.event p {
+  font-size: 16px;
+}
+.date {
+  position: absolute;
+  top: 20px;
+  width: 100px;
+  font-weight: bold;
+  color: #007bff;
+}
+.left .date {
+  right: -120px;
+}
+.right .date {
+  left: -120px;
+}
+
+/* Détails supplémentaires */
+.details {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease; /* Réduction de la durée de l'animation */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.details.active {
+  opacity: 1;
+  max-height: 200px;
+}
+
+/* Animation de la timeline */
+.timeline {
+  animation: slideIn 1s ease-out; /* Réduction de la durée à 1s */
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
