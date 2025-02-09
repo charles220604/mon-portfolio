@@ -510,7 +510,7 @@ h2 {
 /* Timeline */
 .timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
 }
 .timeline::before {
