@@ -288,22 +288,7 @@ h2 {
   color: #007bff;
 }
 
-/* Timeline */
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 6px;
-  height: 100%;
-  background-color: #007bff;
-  transform: translateX(-50%);
-}
+
 .event {
   position: relative;
   width: 50%;
