@@ -250,13 +250,13 @@ html {
 
 /* Appliquer le fond à la page */
 body {
-  font-family: Arial, sans-serif;
+  /*font-family: Arial, sans-serif;
   background: 010;
   background-size: cover;
   color: #333;
   margin: 50;
   padding: 50;
-
+*/
 }
 
 /* Section header */
