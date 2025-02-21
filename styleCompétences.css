@@ -1,0 +1,188 @@
+
+/* En-tête */
+header {
+  background: #333;
+  color: #FFF;
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeIn 1s ease-in;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header ul li {
+  margin: 0 15px;
+}
+
+header ul li a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Effet de fond */
+html {
+  --sz: 20px;
+  --c0: #ffffff00;
+  --c1: #bdd0e1;
+  --c2: #809bb9;
+  --c3: #3e394a;
+  --ts: 50%/ calc(var(--sz) * 13.25) calc(var(--sz) * 11.7);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background:
+    repeating-conic-gradient(#3b354730 0.000001%, var(--c0) 0.00005%, var(--c0) 0.00035%, var(--c0) 0.00005%) var(--ts),
+    repeating-conic-gradient(#35638b59 0.00002%, var(--c0) 0.00008%, var(--c0) 0.0008%, var(--c0) 0.00008%) var(--ts),
+    repeating-linear-gradient(90deg, var(--c0) 0 24.33%, var(--c3) 0 25%) var(--ts),
+    linear-gradient(210deg, var(--c0) 0 80%, var(--c3) calc(80% + 1px) 80.5%, var(--c0) calc(80.5% + 1px) 100%) var(--ts),
+    conic-gradient(from -90deg at 49.75% 100%, var(--c1) 0 30deg, var(--c0) 0 150deg, var(--c2) 0 60deg) var(--ts),
+    conic-gradient(from -180deg at 24.5% 50.5%, var(--c1) 0 119deg, var(--c0) 0 100%) var(--ts),
+    conic-gradient(from 120deg at 74.5% 50%, var(--c3) 0 120deg, var(--c0) 0 100%) var(--ts),
+    conic-gradient(from 180deg at 49.5% 34%, var(--c2) 0 60deg, var(--c0) 0 100%) var(--ts),
+    conic-gradient(from -120deg at 50% 34%, var(--c3) 0 60deg, var(--c0) 0 100%) var(--ts),
+    conic-gradient(from 0deg at 74.5% 17.5%, var(--c2) 0 60deg, var(--c3) 0 121deg, var(--c0) 0 100%) var(--ts),
+    linear-gradient(150deg, var(--c0) 0 40%, var(--c3) calc(40% + 1px) 40.5%, var(--c0) calc(40.5% + 1px) 100%) var(--ts),
+    linear-gradient(90deg, var(--c0) 0 50%, var(--c2) 0 75%, var(--c0) 0 100%) var(--ts),
+    repeating-linear-gradient(90deg, var(--c1) 0 24.33%, var(--c3) 0 25%) var(--ts);
+}
+
+
+.profil-container {
+    display: flex;
+    align-items: left; /* Aligne verticalement */
+    gap: 30px; /* Espacement entre l'image et le texte */
+    max-width: 1200px; /* Largeur max du bloc */
+    margin: 20px auto; /* Centre le tout */
+    background: #f9f9f9; /* Fond légèrement gris */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+}
+
+.Semestre au canada? {
+    display: flex;
+    align-items: left; /* Aligne verticalement */
+    gap: 30px; /* Espacement entre l'image et le texte */
+    max-width: 1200px; /* Largeur max du bloc */
+    margin: 20px auto; /* Centre le tout */
+    background: #f9f9f9; /* Fond légèrement gris */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+}
+
+.photo img {
+    width: 250px; /* Taille de l'image */
+    height: auto;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.presentation {
+    flex: 1; /* Prend l'espace restant */
+    text-align: left;
+}
+
+.presentation h2 {
+    margin-bottom: 10px;
+}
+
+.presentation p {
+    margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  text-align: center;
+  background: #333;
+  color: #FFF;
+  padding: 10px 0;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in;
+}
