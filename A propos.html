@@ -49,11 +49,57 @@
 <!-- Qui suis-je ? -->
   <section id="nuage_mots">
     <div class="nuage_mots">
-      
-        <h2>Nuage des mots qui me définissent </h2>
-    
+        <h2>Nuage de mots qui me définissent</h2>
+        <svg id="wordCloud"></svg>
     </div>
-  </section>
+</section>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
+
+<script>
+    const words = [
+        { text: "Curieux", size: 40 }, { text: "Passionné", size: 50 }, 
+        { text: "Ingénieux", size: 35 }, { text: "Autonome", size: 45 }, 
+        { text: "Rigoureux", size: 30 }, { text: "Créatif", size: 38 }, 
+        { text: "Electronique", size: 42 }, { text: "Programmation", size: 55 }, 
+        { text: "Arduino", size: 33 }, { text: "Automatisme", size: 48 }, 
+        { text: "Réseaux", size: 28 }, { text: "HTML", size: 40 }, 
+        { text: "CSS", size: 36 }, { text: "C++", size: 38 }, 
+        { text: "Python", size: 45 }, { text: "WinDev", size: 32 }, 
+        { text: "Maintenance", size: 40 }, { text: "BUT GEII", size: 50 }
+    ];
+
+    const width = 600, height = 400;
+
+    const layout = d3.layout.cloud()
+        .size([width, height])
+        .words(words.map(d => Object.assign({}, d)))
+        .padding(5)
+        .rotate(() => (Math.random() > 0.5 ? 0 : 90)) // Rotation aléatoire
+        .fontSize(d => d.size)
+        .on("end", draw);
+
+    layout.start();
+
+    function draw(words) {
+        d3.select("#wordCloud")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2}, ${height / 2})`)
+            .selectAll("text")
+            .data(words)
+            .enter().append("text")
+            .style("font-size", d => `${d.size}px`)
+            .style("fill", () => `hsl(${Math.random() * 360}, 100%, 50%)`) // Couleurs aléatoires
+            .style("font-family", "Arial, sans-serif")
+            .attr("text-anchor", "middle")
+            .attr("transform", d => `translate(${d.x},${d.y}) rotate(${d.rotate})`)
+            .text(d => d.text);
+    }
+</script>
+
 
   
 
