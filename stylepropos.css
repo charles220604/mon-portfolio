@@ -1,3 +1,4 @@
+
 /* En-tête */
 header {
   background: #333;
@@ -125,7 +126,7 @@ html {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
 }
 
-.Semestre au canada? {
+.Languages de programmation {
     display: flex;
     align-items: left; /* Aligne verticalement */
     gap: 30px; /* Espacement entre l'image et le texte */
