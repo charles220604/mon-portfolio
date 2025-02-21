@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Tassin Hugo</title>
   <link rel="stylesheet" href="stylepropos.css">
+  <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.0.0/dist/wordcloud.min.js"></script>
+
 </head>
 <body>
 
@@ -53,6 +58,12 @@
         
     </div>
   </section>
+
+  <section id="Nuage-de-mots">
+    <h2>Mes mots-clés</h2>
+    <canvas id="wordcloud" width="600" height="400"></canvas>
+  </section>
+
 
 
 
@@ -145,6 +156,31 @@
         var details = document.getElementById(id);
         details.classList.toggle("active");
     }
+    <script>
+  var words = [
+    {text: "Automatisme", weight: 10},
+    {text: "Informatique", weight: 9},
+    {text: "Electronique", weight: 8},
+    {text: "Génie Electrique", weight: 7},
+    {text: "Arduino", weight: 6},
+    {text: "IoT", weight: 5},
+    {text: "Projet", weight: 4},
+    {text: "Innovation", weight: 3},
+    {text: "Développement", weight: 2},
+    {text: "Technologie", weight: 1}
+  ];
+
+  WordCloud(document.getElementById('wordcloud'), {
+    list: words,
+    gridSize: 10,
+    weightFactor: 10,
+    fontFamily: 'Arial, sans-serif',
+    color: 'random-dark',
+    rotateRatio: 0.5,
+    rotationSteps: 2
+  });
+</script>
+
   </script>
 </body>
 </html>
