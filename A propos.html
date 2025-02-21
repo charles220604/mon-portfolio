@@ -1,48 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Tassin Hugo</title>
-  <link rel="stylesheet" href="stylepropos.css">
-  
-
-
-</head>
-<body>
-
-  <!-- En-tête -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="Accueil.html">Accueil</a></li>
-        <li><a href="A propos.html">À propos</a></li>
-        <li><a href="Mes compétences.HTML">Compétences</a></li>
-        <li><a href="Mes projets.html">Projets</a></li>
-        <li><a href="Accueil.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Qui suis-je ? -->
-  <section id="Qui-suis-je ?">
-   
-    <div class="profil-container">
-      <div class="photo">
-        <img src="Photo_portfolio/Photo_profil_portfolio.png" alt="Photo de profil">
-      </div>
-      <div class="presentation">
-        <h2>À propos de moi</h2>
-        <p><strong>Nom :</strong> Tassin</p>
-        <p><strong>Prénom :</strong> Hugo</p>
-        <p><strong>Âge :</strong> 20 ans</p>
-        <p><strong>Formation :</strong> BUT GEII option AII au Mont Houy à Valenciennes</p>
-         </div>
-    </div>
-  </section>
-
-
-  
 <section id="nuage_mots">
     <div class="nuage_mots">
         <h2 style="text-align: center;">Nuage de mots qui me définissent</h2>
@@ -68,7 +23,7 @@
         { text: "Maintenance", size: 40 }, { text: "BUT GEII", size: 50 }
     ];
 
-    const width = 1200, height = 800;
+    const width = 800, height = 400;
 
     const layout = d3.layout.cloud()
         .size([width, height])
@@ -85,118 +40,15 @@
             .attr("width", "100%")  // Largeur responsive
             .attr("height", height)
             .append("g")
-            .attr("transform", translate(${width / 2}, ${height / 2}))
+            .attr("transform", `translate(${width / 2}, ${height / 2})`)
             .selectAll("text")
             .data(words)
             .enter().append("text")
-            .style("font-size", d => ${d.size}px)
-            .style("fill", () => hsl(${Math.random() * 360}, 100%, 50%)) // Couleurs aléatoires
+            .style("font-size", d => `${d.size}px`)
+            .style("fill", () => `hsl(${Math.random() * 360}, 100%, 50%)`) // Couleurs aléatoires
             .style("font-family", "Arial, sans-serif")
             .attr("text-anchor", "middle")
-            .attr("transform", d => translate(${d.x},${d.y}) rotate(${d.rotate}))
+            .attr("transform", d => `translate(${d.x},${d.y}) rotate(${d.rotate})`)
             .text(d => d.text);
     }
 </script>
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-  <footer>
-    <p>© 2025 Tassin Hugo - Tous droits réservés</p>
-  </footer>
-
-  <script>
-    function toggleDetails(id) {
-        var details = document.getElementById(id);
-        details.classList.toggle("active");
-    }
-  </script>
-  
-
-  
-</body>
-</html>
