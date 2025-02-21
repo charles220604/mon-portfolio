@@ -186,3 +186,29 @@ footer {
   margin-top: 20px;
   animation: fadeIn 2s ease-in;
 }
+
+
+
+/* Style pour la section du nuage de mots */
+#Nuage-de-mots {
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+#Nuage-de-mots h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#wordcloud {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
