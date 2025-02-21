@@ -46,11 +46,10 @@
 
 
   
-<!-- Qui suis-je ? -->
-  <section id="nuage_mots">
+<section id="nuage_mots">
     <div class="nuage_mots">
-        <h2>Nuage de mots qui me définissent</h2>
-        <div style="margin-top: 20px; display: flex; justify-content: center;">
+        <h2 style="text-align: center;">Nuage de mots qui me définissent</h2>
+        <div style="margin-top: 40px; display: flex; justify-content: center; align-items: center;">
             <svg id="wordCloud"></svg>
         </div>
     </div>
@@ -72,12 +71,12 @@
         { text: "Maintenance", size: 40 }, { text: "BUT GEII", size: 50 }
     ];
 
-    const width = 600, height = 400;
+    const width = 800, height = 400;
 
     const layout = d3.layout.cloud()
         .size([width, height])
         .words(words.map(d => Object.assign({}, d)))
-        .padding(10)  // Augmenté pour plus d'espace entre les mots
+        .padding(10)  // Augmenté pour un meilleur espacement
         .rotate(() => (Math.random() > 0.5 ? 0 : 90)) // Rotation aléatoire
         .fontSize(d => d.size)
         .on("end", draw);
@@ -86,7 +85,7 @@
 
     function draw(words) {
         d3.select("#wordCloud")
-            .attr("width", width)
+            .attr("width", "100%")  // Largeur responsive
             .attr("height", height)
             .append("g")
             .attr("transform", `translate(${width / 2}, ${height / 2})`)
@@ -101,6 +100,7 @@
             .text(d => d.text);
     }
 </script>
+
 
 
   
