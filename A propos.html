@@ -77,7 +77,7 @@
     const layout = d3.layout.cloud()
         .size([width, height])
         .words(words.map(d => Object.assign({}, d)))
-        .padding(8)  // Augmenté pour plus d'espace entre les mots
+        .padding(10)  // Augmenté pour plus d'espace entre les mots
         .rotate(() => (Math.random() > 0.5 ? 0 : 90)) // Rotation aléatoire
         .fontSize(d => d.size)
         .on("end", draw);
