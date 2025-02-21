@@ -6,19 +6,6 @@ body {
 }
 
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-.typing-text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #ff6600;
-    animation: typing 3s steps(40) forwards, blink 0.8s infinite;
-}
 
 
 
@@ -33,7 +20,7 @@ body {
 
 
 
-/* Animations 
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
