@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -88,15 +85,15 @@
             .attr("width", "100%")  // Largeur responsive
             .attr("height", height)
             .append("g")
-            .attr("transform", `translate(${width / 2}, ${height / 2})`)
+            .attr("transform", translate(${width / 2}, ${height / 2}))
             .selectAll("text")
             .data(words)
             .enter().append("text")
-            .style("font-size", d => `${d.size}px`)
-            .style("fill", () => `hsl(${Math.random() * 360}, 100%, 50%)`) // Couleurs aléatoires
+            .style("font-size", d => ${d.size}px)
+            .style("fill", () => hsl(${Math.random() * 360}, 100%, 50%)) // Couleurs aléatoires
             .style("font-family", "Arial, sans-serif")
             .attr("text-anchor", "middle")
-            .attr("transform", d => `translate(${d.x},${d.y}) rotate(${d.rotate})`)
+            .attr("transform", d => translate(${d.x},${d.y}) rotate(${d.rotate}))
             .text(d => d.text);
     }
 </script>
