@@ -277,10 +277,12 @@ body {
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    margin: 20px auto;
+    max-width: 1200px;
  }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
