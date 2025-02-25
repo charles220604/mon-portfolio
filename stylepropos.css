@@ -187,7 +187,7 @@ html {
     align-items: center;
     flex-wrap: wrap;
     max-width: 800px; /* Augmenté pour plus d'espace */
-    height: 300px; /* Augmenté pour étaler les mots */
+    height: 600px; /* Augmenté pour étaler les mots */
     margin: 20px auto;
     padding: 20px;
     background: #f9f9f9;
