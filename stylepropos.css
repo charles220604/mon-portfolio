@@ -181,26 +181,6 @@ html {
 
 
 
-.nuage-container {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Ajuste selon la taille souhaitée */
-    margin: 20px auto;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.nuage-mot {
-    position: absolute;
-    font-size: calc(14px + 0.5vw);
-    font-weight: bold;
-    color: #333;
-    opacity: 0.9;
-    transition: transform 2s ease-in-out, opacity 1s ease-in-out;
-    white-space: nowrap;
-}
 
 
 
