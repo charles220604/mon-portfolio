@@ -197,6 +197,30 @@ html {
 
 
 
+.nuage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.nuage-mot {
+    position: absolute;
+    font-size: calc(12px + 0.5vw);
+    font-weight: bold;
+    color: #333;
+    opacity: 0.8;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
 
 
 
