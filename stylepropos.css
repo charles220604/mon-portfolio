@@ -573,6 +573,58 @@ body {
 
 
 
+/* Carrousel *
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Carrousel */
 .carousel-container {
   position: relative;
@@ -593,6 +645,14 @@ body {
   width: 100%;
   border-radius: 10px;
 }
+
+
+
+
+
+
+
+
 
 /* Boutons de navigation */
 .prev,
