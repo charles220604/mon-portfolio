@@ -226,7 +226,7 @@
 
 
 
-  <script>
+ <!-- <script>
   let profilIndex = 0;
   
   function showSlideProfil(n) {
@@ -240,6 +240,30 @@
   function prevSlideProfil() { profilIndex--; showSlideProfil(profilIndex); }
 
   setInterval(() => { nextSlideProfil(); }, 5000);
+</script>-->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let index = 0;
+    const items = document.querySelectorAll(".carousel-item");
+    const total = items.length;
+
+    function showSlide(i) {
+      items.forEach(item => item.classList.remove("active"));
+      items[i].classList.add("active");
+    }
+
+    document.querySelector(".next").addEventListener("click", function () {
+      index = (index + 1) % total;
+      showSlide(index);
+    });
+
+    document.querySelector(".prev").addEventListener("click", function () {
+      index = (index - 1 + total) % total;
+      showSlide(index);
+    });
+
+    showSlide(index); // Afficher la première image
+  });
 </script>
   
 
