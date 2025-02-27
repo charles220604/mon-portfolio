@@ -422,7 +422,7 @@ body {
 /* Carrousel pour la présentation */
 .profil-carousel {
   width: 100%;
-  max-width: 500px;
+  max-width: 1200px;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
