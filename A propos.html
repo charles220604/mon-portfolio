@@ -226,7 +226,7 @@
 
 
 
- <!-- <script>
+ <!--<script>
   let profilIndex = 0;
   
   function showSlideProfil(n) {
@@ -240,30 +240,36 @@
   function prevSlideProfil() { profilIndex--; showSlideProfil(profilIndex); }
 
   setInterval(() => { nextSlideProfil(); }, 5000);
-</script>-->
+</script>
+  -->
+
+
+
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let index = 0;
-    const items = document.querySelectorAll(".carousel-item");
-    const total = items.length;
+  let profilIndex = 0;
 
-    function showSlide(i) {
-      items.forEach(item => item.classList.remove("active"));
-      items[i].classList.add("active");
-    }
+  function showSlideProfil() {
+    const slides = document.querySelectorAll(".profil-carousel .carousel img");
+    
+    if (slides.length === 0) return; // Vérifier qu'il y a des images
 
-    document.querySelector(".next").addEventListener("click", function () {
-      index = (index + 1) % total;
-      showSlide(index);
-    });
+    profilIndex = (profilIndex + slides.length) % slides.length; // Gestion circulaire
 
-    document.querySelector(".prev").addEventListener("click", function () {
-      index = (index - 1 + total) % total;
-      showSlide(index);
-    });
+    document.querySelector(".profil-carousel .carousel").style.transform = `translateX(${-profilIndex * 100}%)`;
+  }
 
-    showSlide(index); // Afficher la première image
-  });
+  function nextSlideProfil() { 
+    profilIndex++; 
+    showSlideProfil(); 
+  }
+
+  function prevSlideProfil() { 
+    profilIndex--; 
+    showSlideProfil(); 
+  }
+
+  // Défilement automatique
+  setInterval(() => { nextSlideProfil(); }, 5000);
 </script>
   
 
