@@ -419,7 +419,46 @@ body {
 
 
 
+/* Carrousel pour la présentation */
+.profil-carousel {
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
+.profil-carousel .carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.profil-carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
 
 
 
