@@ -639,6 +639,10 @@ body {
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width:100%;
+  height: 500px; /* Par exemple, définissez la hauteur souhaitée */
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel img {
@@ -648,6 +652,7 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 
