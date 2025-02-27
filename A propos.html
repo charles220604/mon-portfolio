@@ -117,7 +117,23 @@
 
 
 
+<div class="profil-container">
+  <div class="presentation">
+    <h2>Ma présentation en images</h2>
+    <p>Voici quelques moments marquants de mon parcours :</p>
 
+    <!-- Carrousel -->
+    <div class="carousel-container profil-carousel">
+      <div class="carousel">
+        <img src="Photo_portfolio/photo1.jpg" alt="Présentation 1">
+        <img src="Photo_portfolio/photo2.jpg" alt="Présentation 2">
+        <img src="Photo_portfolio/photo3.jpg" alt="Présentation 3">
+      </div>
+      <button class="carousel-btn prev" onclick="prevSlideProfil()">❮</button>
+      <button class="carousel-btn next" onclick="nextSlideProfil()">❯</button>
+    </div>
+  </div>
+</div>
 
 
 
@@ -198,6 +214,24 @@
         details.classList.toggle("active");
     }
   </script>
+
+
+
+  <script>
+  let profilIndex = 0;
+  
+  function showSlideProfil(n) {
+    const slides = document.querySelectorAll(".profil-carousel .carousel img");
+    if (n >= slides.length) profilIndex = 0;
+    if (n < 0) profilIndex = slides.length - 1;
+    document.querySelector(".profil-carousel .carousel").style.transform = `translateX(${-profilIndex * 100}%)`;
+  }
+
+  function nextSlideProfil() { profilIndex++; showSlideProfil(profilIndex); }
+  function prevSlideProfil() { profilIndex--; showSlideProfil(profilIndex); }
+
+  setInterval(() => { nextSlideProfil(); }, 3000);
+</script>
   
 
   
