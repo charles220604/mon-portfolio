@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Tassin Hugo</title>
   <link rel="stylesheet" href="stylepropos.css">
-  
-
-
 </head>
 <body>
 
@@ -25,181 +22,71 @@
   </header>
 
   <!-- Qui suis-je ? -->
-  <section id="Qui-suis-je ?">
-   
+  <section id="Qui-suis-je">
     <div class="profil-container">
       <div class="photo">
         <img src="Photo_portfolio/Photo_profil_portfolio.png" alt="Photo de profil">
       </div>
-        <div class="presentation">
+      <div class="presentation">
         <h2>À propos de moi</h2>
         <p><strong>Nom :</strong> Tassin</p>
         <p><strong>Prénom :</strong> Hugo</p>
         <p><strong>Âge :</strong> 20 ans</p>
         <p><strong>Formation :</strong> BUT GEII option AII au Mont Houy à Valenciennes</p>
-        </div>
+      </div>
     </div>
-
-
-    <div class="profil-container">
-      
-        <div class="presentation">
-        <h2>Nuage de mots qui me définissent</h2>
-        <p></p>
-        </div>
-    </div>
-
-
-
-
-    <div class="content">
-  <h1><center>Mon parcours</center></h1>
-</div>
-<div class="timeline">
-  <div class="container left">
-    <p>
-      <i class="fa fa-code-fork" aria-hidden="true"></i>
-    <div class="content">
-      <h2>3eme année BUT GEII</h2>
-      <p><strong>2024-2025  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2eme année BUT GEII</h2>
-      <p><strong>2023-2024  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel).</strong><br><br>Semestre d'étude à l'étranger au Canada au cégep de saint jean sur richelieu en famille d'accueil</p>
-    </div>
-  </div>
-    <div class="container left">
-    <div class="content">
-      <h2>1ere année BUT GEII</h2>
-      <p><strong>2022-2023  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
-    </div>
-  </div>
-    <div class="container right">
-    <div class="content">
-      <h2>Terminal</h2>
-      <p><strong>2021-2022  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <h2>zfe</h2>
-      <p>fez<p><i>fze</i></p>
-    </div>
-  </div>
-    <div class="container right">
-    <div class="content">
-      <h2>fez</h2>
-      <p>regthj</p>
-    </div>
-  </div>
-</div>
-
-  <div class="profil-container">
-        <div class="presentation">
-        <h2>Mon semestre d'étude au Canada</h2>
-        <p></p>
-        </div>
-  </div>
-
-
-
-
-
-    
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
+  <section>
+    <h1 class="title-center">Mon parcours</h1>
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h2>3ème année BUT GEII</h2>
+          <p>2024-2025 - IUT Mont Houy Valenciennes, option AII</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>2ème année BUT GEII</h2>
+          <p>2023-2024 - IUT Mont Houy Valenciennes, option AII.<br>Semestre d'étude au Canada au cégep de Saint-Jean-sur-Richelieu.</p>
+        </div>
+      </div>
+      <!-- Ajout des autres années ici -->
+    </div>
+  </section>
+
+  <!-- Mon semestre d'étude au Canada avec carrousel -->
+  <section>
+    <h2>Mon semestre d'étude au Canada</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="Photo_portfolio/CANADA_presentation.jpg" alt="Canada Présentation">
+        <img src="Photo_portfolio/CANADA_voyage.jpg" alt="Canada Voyage">
+        <img src="Photo_portfolio/20240525_110719.jpg" alt="Photo 1">
+        <img src="Photo_portfolio/20240525_120611.jpg" alt="Photo 2">
+      </div>
+      <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+      <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Tassin Hugo - Tous droits réservés</p>
   </footer>
 
   <script>
-    function toggleDetails(id) {
-        var details = document.getElementById(id);
-        details.classList.toggle("active");
+    let index = 0;
+    function showSlide(n) {
+      const slides = document.querySelectorAll(".carousel img");
+      if (n >= slides.length) index = 0;
+      if (n < 0) index = slides.length - 1;
+      document.querySelector(".carousel").style.transform = `translateX(${-index * 100}%)`;
     }
+    function nextSlide() { index++; showSlide(index); }
+    function prevSlide() { index--; showSlide(index); }
+    setInterval(() => { nextSlide(); }, 3000);
   </script>
-  
 
-  
 </body>
 </html>
