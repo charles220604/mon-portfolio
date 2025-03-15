@@ -460,8 +460,8 @@ h2 {
 
 .button-28:hover {
   color: #fff;
-  /*background-color: #1A1A1A;*/
-  background-color: #809bb9;
+  background-color: #1A1A1A;
+  /*background-color: #809bb9;*/
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
