@@ -624,8 +624,9 @@ body {
 
 
 
+/*
+/* Carrousel 
 
-/* Carrousel */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -640,7 +641,7 @@ body {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width:100%;
-  height: 500px; /* Par exemple, définissez la hauteur souhaitée */
+  height: 500px; /* Par exemple, définissez la hauteur souhaitée 
   overflow: hidden;
   position: relative;
 }
@@ -677,6 +678,7 @@ body {
 
 
 
+*/
 
 
 
@@ -691,9 +693,8 @@ body {
 
 
 
-
-
-/* Boutons de navigation */
+/*
+/* Boutons de navigation *
 .prev,
 .next {
   position: absolute;
@@ -715,6 +716,8 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+*/
 
 
 
