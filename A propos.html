@@ -3,10 +3,8 @@
  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Portfolio - Tassin Hugo</title>
    <link rel="stylesheet" href="stylepropos.css">
-   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
  
  
  
@@ -44,9 +42,8 @@
  
  
      <div class="profil-container">
-       
  
-     
+         <div class="presentation">
          <h2>Nuage de mots qui me définissent</h2>
          <p></p>
          </div>
@@ -55,49 +52,49 @@
  
  
  
-        <div class="content">
-      <h1><center>Mon parcours</center></h1>
-    </div>
-    <div class="timeline">
-      <div class="container left">
-        <p>
-          <i class="fa fa-code-fork" aria-hidden="true"></i>
-        <div class="content">
-          <h2>3eme année BUT GEII</h2>
-          <p><strong>2024-2025  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
-        </div>
-      </div>
-      <div class="container right">
-        <div class="content">
-          <h2>2eme année BUT GEII</h2>
-          <p><strong>2023-2024  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel).</strong><br><br>Semestre d'étude à l'étranger au Canada au cégep de saint jean sur richelieu en famille d'accueil</p>
-        </div>
-      </div>
-        <div class="container left">
-        <div class="content">
-          <h2>1ere année BUT GEII</h2>
-          <p><strong>2022-2023  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
-        </div>
-      </div>
-        <div class="container right">
-        <div class="content">
-          <h2>Terminal</h2>
-          <p><strong>2021-2022  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
-        </div>
-      </div>
-      <div class="container left">
-        <div class="content">
-          <h2>zfe</h2>
-          <p>fez<p><i>fze</i></p>
-        </div>
-      </div>
-        <div class="container right">
-        <div class="content">
-          <h2>fez</h2>
-          <p>regthj</p>
-        </div>
-      </div>
-    </div>
+     <div class="content">
+   <h1><center>Mon parcours</center></h1>
+ </div>
+ <div class="timeline">
+   <div class="container left">
+     <p>
+       <i class="fa fa-code-fork" aria-hidden="true"></i>
+     <div class="content">
+       <h2>3eme année BUT GEII</h2>
+       <p><strong>2024-2025  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
+     </div>
+   </div>
+   <div class="container right">
+     <div class="content">
+       <h2>2eme année BUT GEII</h2>
+       <p><strong>2023-2024  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel).</strong><br><br>Semestre d'étude à l'étranger au Canada au cégep de saint jean sur richelieu en famille d'accueil</p>
+     </div>
+   </div>
+     <div class="container left">
+     <div class="content">
+       <h2>1ere année BUT GEII</h2>
+       <p><strong>2022-2023  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
+     </div>
+   </div>
+     <div class="container right">
+     <div class="content">
+       <h2>Terminal</h2>
+       <p><strong>2021-2022  IUT Mont Houy Valenciennes option AII (Automatisme et informatique Industriel)</strong></p>
+     </div>
+   </div>
+   <div class="container left">
+     <div class="content">
+       <h2>zfe</h2>
+       <p>fez<p><i>fze</i></p>
+     </div>
+   </div>
+     <div class="container right">
+     <div class="content">
+       <h2>fez</h2>
+       <p>regthj</p>
+     </div>
+   </div>
+ </div>
  
    <div class="profil-container">
          <div class="presentation">
@@ -143,7 +140,8 @@
        </div>
        <button class="carousel-btn prev" onclick="prevSlideProfil()">❮</button>
        <button class="carousel-btn next" onclick="nextSlideProfil()">❯</button>
-     
+     </div>
+   </div>
  </div>
  
  
@@ -228,6 +226,7 @@
  
  
  
+  <!-- <script>
   <!--<script>
    let profilIndex = 0;
    
@@ -242,17 +241,27 @@
    function prevSlideProfil() { profilIndex--; showSlideProfil(profilIndex); }
  
    setInterval(() => { nextSlideProfil(); }, 5000);
+ </script>-->
  </script>
    -->
  
  
  
    <script>
+   document.addEventListener("DOMContentLoaded", function () {
+     let index = 0;
+     const items = document.querySelectorAll(".carousel-item");
+     const total = items.length;
+ 
+     function showSlide(i) {
+       items.forEach(item => item.classList.remove("active"));
+       items[i].classList.add("active");
+     }
    let profilIndex = 0;
  
    function showSlideProfil() {
      const slides = document.querySelectorAll(".profil-carousel .carousel img");
- 
+     
      if (slides.length === 0) return; // Vérifier qu'il y a des images
  
      profilIndex = (profilIndex + slides.length) % slides.length; // Gestion circulaire
@@ -260,16 +269,26 @@
      document.querySelector(".profil-carousel .carousel").style.transform = `translateX(${-profilIndex * 100}%)`;
    }
  
+     document.querySelector(".next").addEventListener("click", function () {
+       index = (index + 1) % total;
+       showSlide(index);
+     });
    function nextSlideProfil() { 
      profilIndex++; 
      showSlideProfil(); 
    }
  
+     document.querySelector(".prev").addEventListener("click", function () {
+       index = (index - 1 + total) % total;
+       showSlide(index);
+     });
    function prevSlideProfil() { 
      profilIndex--; 
      showSlideProfil(); 
    }
  
+     showSlide(index); // Afficher la première image
+   });
    // Défilement automatique
    setInterval(() => { nextSlideProfil(); }, 5000);
  </script>
