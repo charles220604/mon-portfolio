@@ -223,6 +223,9 @@
 
 
 
+<!-- Ajoute ce lien dans le <head> si ce n'est pas encore fait -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <section id="contact">
   <h2>Contact</h2>
 
@@ -230,36 +233,37 @@
   <p><i class="fas fa-envelope"></i> E-mail : <a href="mailto:tassinhugo34@gmail.com">tassinhugo34@gmail.com</a></p>
   <p><i class="fas fa-map-marker-alt"></i> Adresse postale : 4 rue Voltaire, Hérin 59195</p>
 
-  <div class="mapouter">
-    <div class="gmap_canvas">
-      <iframe width="820" height="560" id="gmap_canvas"
-        src="https://maps.google.com/maps?q=4+rue+voltaire+herin&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-      </iframe>
-      <style>
-        .mapouter {
-          position: relative;
-          text-align: right;
-          height: 560px;
-          width: 820px;
-        }
-
-        .gmap_canvas {
-          overflow: hidden;
-          background: none !important;
-          height: 560px;
-          width: 820px;
-        }
-      </style>
+  <!-- Conteneur centré -->
+  <div style="display: flex; justify-content: center;">
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe width="820" height="560" id="gmap_canvas"
+          src="https://maps.google.com/maps?q=4+rue+voltaire+herin&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+      </div>
     </div>
   </div>
+
+  <style>
+    .mapouter {
+      position: relative;
+      text-align: right;
+      height: 560px;
+      width: 820px;
+    }
+
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      height: 560px;
+      width: 820px;
+    }
+  </style>
 
   <p><i class="fab fa-github"></i> Lien GitHub : <a href="https://github.com/ton-profil" target="_blank">ton-profil</a></p>
   <p><i class="fab fa-linkedin"></i> Mon profil LinkedIn : <a href="https://www.linkedin.com/in/ton-profil" target="_blank">ton-profil</a></p>
 </section>
-
-
-
 
 
 
