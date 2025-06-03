@@ -419,11 +419,9 @@ h2 {
 
 .slide-image img {
   width: 100%;
-  height: auto;
-  object-fit: contain; /* ou 'cover' selon le rendu souhaité */
+  height: auto; /* ✅ Pour ne pas étirer verticalement */
+  object-fit: contain; /* ou 'cover' selon ton besoin visuel */
 }
-
-
 
 
 
